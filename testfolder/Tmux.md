@@ -21,3 +21,9 @@ I need to get thisdone
 
 
 > Mark
+
+```go
+print("Hello World")
+```
+
+this form of using markdown is not helpful when it comes to me actually getting nvim text working
