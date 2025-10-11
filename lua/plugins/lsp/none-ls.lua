@@ -1,3 +1,8 @@
+-- None-ls
+-- update of null-ls, a deprecated version
+-- null-ls is a bridge gap for general-purpose langauge servers
+
+
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()

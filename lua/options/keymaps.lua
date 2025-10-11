@@ -28,12 +28,9 @@ keymap("i", "<A-l>", "<Right>", opts)
 vim.keymap.set("n", "<C-.>", ":lua ToggleMdMath()<CR>", { noremap = true, silent = true })
 -- Neo-tree Keybind
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>", {})
--- Telescope Keybind
-local function TelescopeBindings()
-    local builtin = require("telescope.builtin")
-    vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-    vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
-end
+
+
+-- lua/options/keymaps.lua
 
 -- Other important keymap notes
 -- Ctrl + f for full page down
