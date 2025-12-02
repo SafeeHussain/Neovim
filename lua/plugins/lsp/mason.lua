@@ -32,6 +32,9 @@ return {
 					"pyright", -- LSP for python
 					"ruff", -- Linter and formatter
 					"taplo", -- LSP for toml (pyproject.toml files)
+
+                    -- spell checker
+                    "ltex", 
 				},
 			})
 		end,
@@ -66,6 +69,13 @@ return {
                 capabilities = capabilities,
             }
             vim.lsp.enable("taplo")
+
+            -- ltex (grammar/spell checker) - EXCLUDES markdown
+            vim.lsp.config.ltex = {
+                capabilities = capabilities,
+                filetypes = { "tex", "bib", "plaintex" },  
+            }
+            vim.lsp.enable("ltex")
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

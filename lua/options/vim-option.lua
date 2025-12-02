@@ -1,10 +1,10 @@
 -- Indentation for the code
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set smartindent")
-vim.cmd("set autoindent")
+vim.opt.expandtab=true
+vim.opt.tabstop=4
+vim.opt.softtabstop=4
+vim.opt.shiftwidth=4
+vim.opt.smartindent=true
+vim.opt.autoindent=true
 
 ----
 
@@ -20,9 +20,23 @@ vim.opt.relativenumber = false
 -- Do "+y" to copy the code and then ctrl+v to paste
 
 
--- sets the conceallevel to 2
-vim.opt.conceallevel = 2
+-- sets the concealment levels
+-- Used for making the markdown to look more neat
+vim.opt.conceallevel = 1
 vim.opt.concealcursor = "nc"
+
+-- Compiler for latex files
+
+-- Function to save, compile, view, and return to insert mode
+local function latex_quick_compile()
+    vim.cmd('write')  -- Save the file (:w)
+    vim.cmd('normal \\ll')  -- Toggle compilation
+    vim.cmd('normal \\lv')  -- Open viewer
+    vim.cmd('startinsert')  -- Return to insert mode (i)
+end
+
+-- Map to Alt+Enter (or choose your preferred key)
+vim.keymap.set('i', '<C-CR>', latex_quick_compile, { noremap = true})
 
 
 
@@ -35,3 +49,4 @@ vim.api.nvim_set_keymap(
 	"<cmd>lua require('user.runfile').run_current_file()<CR>",
 	{ noremap = true, silent = true }
 )
+

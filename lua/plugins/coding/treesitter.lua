@@ -3,7 +3,6 @@
 
 return {
 	"nvim-treesitter/nvim-treesitter",
-	branch = "master",
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
@@ -17,7 +16,8 @@ return {
 				"markdown",
 				"markdown_inline",
 				"bash",
-			},
+                "latex",
+            },
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = { "markdown" },
