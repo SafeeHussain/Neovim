@@ -1,28 +1,14 @@
 -- Takes image and stores as local folder, then recalls in a .md file
 
 return {
-	"HakonHarnes/img-clip.nvim",
-	event = "VeryLazy",
-	opts = {
-		default = {
-			dir_path = ".", -- save in current directory first
-			file_name = "img-%Y%m%d-%H%M%S",
-			use_absolute_path = false,
-		},
-		filetypes = {
-			markdown = {
-				template = "![img]($FILE_PATH)", -- inserts Markdown link
-			},
-		},
-	},
-	keys = {
-		{
-			"<leader>p",
-			function()
-				require("img-clip").paste_image()
-			end,
-			desc = "Paste image from clipboard",
-			mode = { "n", "i" },
-		},
-	},
+  "HakonHarnes/img-clip.nvim",
+  event = "VeryLazy",
+  opts = {
+    -- add options here
+    -- or leave it empty to use the default settings
+  },
+  keys = {
+    -- suggested keymap
+    { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+  },
 }

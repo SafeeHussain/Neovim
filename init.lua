@@ -31,7 +31,6 @@ vim.opt.rtp:prepend(lazypath)
 
 
 
-
 -- core settings
 require("options.vim-option")
 require("options.keymaps")

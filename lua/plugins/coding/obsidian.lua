@@ -1,41 +1,28 @@
--- Gives the customisability of obsidian in neovim
--- Allows linking to other notes, and helps with notis and whatnot
 
 return {
-	"epwalsh/obsidian.nvim",
-	version = "*",
-	lazy = true,
-	ft = "markdown",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
+  "epwalsh/obsidian.nvim",
+  version = "*",
+  ft = "markdown",
+  enabled = false,
+  dependencies = { "nvim-lua/plenary.nvim" },
 
-	config = function()
+  config = function()
+    require("obsidian").setup({
+      workspaces = {
+        { name = "personal", path = "~/Documents/vaults/personal" },
+        { name = "work",     path = "~/Documents/vaults/work"     },
+      },
 
+      ui = { enable = false },  -- as you already had
 
-		require("obsidian").setup({
-			workspaces = {
-				{
-					name = "personal",
-					path = "~/Documents/vaults/personal",
-				},
-				{
-					name = "work",
-					path = "~/Documents/vaults/work",
-				},
+      -- HARD DISABLE extra features that touch the buffer
+      backlinks = { -- in older versions this may be under 'templates' or similar; disable if present
+        -- if you see any `in_buffer` / `show_in_document` / similar, set to false
+      },
+      note_id_func = function(title) return title end,  -- keep simple logic
 
-			},
-			conceal = {
-				enabled = false,
-			},
-			indent = {
-				enabled = false,
-				per_level = 1,
-				skip_level = 1,
-			},
-			ui = {
-				enable = false,
-			},
-		})
-	end,
+      completion = { nvim_cmp = false },  -- turn off its completion hooks
+    })
+  end,
 }
+

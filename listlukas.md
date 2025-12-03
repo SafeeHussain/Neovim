@@ -1,3 +1,8 @@
+---
+id: listlukas
+aliases: []
+tags: []
+---
 # Multiplexer
 LEJ
 LAJ?
@@ -9,10 +14,24 @@ Kengawa dragron
 
 # Things to do with improving neovim!
 - [~] Install a terminal multiplexer
-    - TMUX
+    - [~] TMUX
     - ZELLIJ
-- [ ] Improve a colorscheme
+- [x] Improve a colorscheme
 - [ ] Get python working on nvim
 - [ ] Get C++ working on nvim
 - [ ] Oil file explorer
 $a$
+
+
+#
+##
+### time to write somethin
+####
+#####
+######
+
+- [ ] to do
+- [x] done
+- [-] yet to do
+- [!] not done
+
