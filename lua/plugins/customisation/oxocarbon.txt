@@ -1,0 +1,11 @@
+-- Different color scheme replacing catpuccin
+
+
+return {
+  "nyoom-engineering/oxocarbon.nvim",
+  priority = 1000, -- load before other plugins
+  config = function()
+    vim.opt.background = "dark" -- or "light"
+    vim.cmd("colorscheme oxocarbon")
+  end,
+}
