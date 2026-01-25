@@ -6,3 +6,4 @@ Had working on my current NeoVim setup, now trying to ensure that the git is now
 
 Should now be working properly
 
+I think its now working...? If you can read this message, then it works! I can now update this
