@@ -905,7 +905,6 @@ return {
 		vim.api.nvim_set_hl(0, "RenderMarkdownTodo", { fg = "#3c8178" })
 		vim.api.nvim_set_hl(0, "RenderMarkdownChecked", { fg = "#79b040" })
 		vim.api.nvim_set_hl(0, "CustomRedGlyph", { fg = "#e95678" })
-		vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { bg = "#166b71" })
 		-- vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { fg = "#764363" })
 		-- vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { fg = "#764363" })
 		-- vim.api.nvim_set_hl(0, "RenderMarkdownH3Bg", { fg = "#764363" })
