@@ -8,12 +8,11 @@ return {
 
 	-- you can set set configuration options here
 	config = function()
-		vim.g.zenbones_darken_comments = 45
-		vim.cmd.colorscheme("zenbones")
-	end,
-
-	init = function()
+        vim.g.zenbones_darken_comments = 45
+        vim.g.nordbones = {darkness = "stark", darken_comments = 35}
+		vim.cmd.colorscheme("nordbones")
 		vim.cmd("set termguicolors")
 		vim.cmd("set background=dark")
 	end,
+
 }
