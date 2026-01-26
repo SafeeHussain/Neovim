@@ -34,7 +34,7 @@ return {
 					"taplo", -- LSP for toml (pyproject.toml files)
 
                     -- spell checker
-                    "ltex", 
+                    "ltex",
 				},
 			})
 		end,
@@ -73,7 +73,7 @@ return {
             -- ltex (grammar/spell checker) - EXCLUDES markdown
             vim.lsp.config.ltex = {
                 capabilities = capabilities,
-                filetypes = { "tex", "bib", "plaintex" },  
+                filetypes = { "tex", "bib", "plaintex" },
             }
             vim.lsp.enable("ltex")
 
