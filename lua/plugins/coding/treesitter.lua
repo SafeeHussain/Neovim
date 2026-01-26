@@ -17,6 +17,8 @@ return {
 				"markdown_inline",
 				"bash",
                 "latex",
+                "html",
+                "yaml",
             },
 			highlight = {
 				enable = true,

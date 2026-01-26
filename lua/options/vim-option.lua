@@ -7,6 +7,9 @@ vim.opt.smartindent=true
 vim.opt.autoindent=true
 
 ----
+-- Disables checks for ruby and perl
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
 
 
 -- Command that changes the clipboard to be able to be copied from neovim code to
@@ -50,3 +53,19 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
+-- Initialising the file script to be used
+-- Lukas' code that he recommends for me to have
+--  cd's you into whatever the nvim argument was
+do
+	if vim.fn.argc() > 0 then
+		local a0 = vim.fn.fnamemodify(vim.fn.argv(0), ":p") -- absolute path
+		if vim.fn.isdirectory(a0) == 1 then
+			pcall(vim.loop.chdir, a0)
+			vim.cmd("cd " .. vim.fn.fnameescape(a0))
+		elseif vim.fn.filereadable(a0) == 1 then
+			local dir = vim.fn.fnamemodify(a0, ":h")
+			pcall(vim.loop.chdir, dir)
+			vim.cmd("cd " .. vim.fn.fnameescape(dir))
+		end
+	end
+end
