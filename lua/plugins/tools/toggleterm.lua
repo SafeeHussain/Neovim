@@ -11,7 +11,7 @@ return {
 		vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 		require("toggleterm").setup({
 			size = 15,
-			open_mapping = "<c-s>",
+			open_mapping = "<c-/>",
 		})
 	end,
 
