@@ -1,5 +1,15 @@
 # My Neovim setup
 
+Personal setup for me to use for Neovim
+
+## What I want to get out of this
+- Make it work for Markdown files
+- Able to compile and be just as if not better than vsc
+    - lua
+    - python
+    - cpp
+- Able to look pretty and have no issues in colours
+
 Had working on my current NeoVim setup, now trying to ensure that the git is now working properly
 
 (Previously just kept reuploading all of the files to the github repository by using the Add file button then folder dumping nvim, forgive me)
