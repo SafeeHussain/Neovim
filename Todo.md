@@ -1,5 +1,6 @@
 # To Do List:
-- [-] fix the weird colour scheme, some colours do not match well at all
+- [x] fix the weird colour scheme, some colours do not match well at all
+    - no problems with zenbones!
 - [-] delete unused configs
 - [-] get better terminal emulator 
     - implemented toggleterm

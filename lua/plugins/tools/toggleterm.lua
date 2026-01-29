@@ -9,6 +9,8 @@ return {
 
 	config = function()
 		vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+		vim.keymap.set("t", "<C-0>", [[<C-\><C-n><C-w>k]], opts)
+
 		require("toggleterm").setup({
 			size = 15,
 			open_mapping = "<c-/>",
