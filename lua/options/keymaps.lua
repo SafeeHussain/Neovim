@@ -32,9 +32,6 @@ end, { desc = 'nvim config dir' })
 -- PLUGIN KEYBINDS:
 vim.keymap.set("n", "<leader>tt", ":terminal<CR>", {desc = "Open terminal session"})
 
--- MdMath Keybind
-vim.keymap.set("n", "<C-.>", ":lua ToggleMdMath()<CR>", { noremap = true, silent = true })
-
 -- Neo-tree Keybind
 vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal left toggle<CR>", {})
 

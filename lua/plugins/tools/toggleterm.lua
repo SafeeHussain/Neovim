@@ -10,6 +10,7 @@ return {
 	config = function()
 		vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
 		vim.keymap.set("t", "<C-0>", [[<C-\><C-n><C-w>k]], opts)
+		vim.keymap.set("n", "<C-0>", [[<C-w>j]], opts)
 
 		require("toggleterm").setup({
 			size = 15,
