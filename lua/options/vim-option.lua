@@ -22,10 +22,9 @@ vim.opt.relativenumber = false
 -- Above command is to ensure all copied code can be pasted elsewhere
 -- Do "+y" to copy the code and then ctrl+v to paste
 
-
 -- sets the concealment levels
 -- Used for making the markdown to look more neat
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 2
 vim.opt.concealcursor = "nc"
 
 -- Compiler for latex files
@@ -43,15 +42,6 @@ vim.keymap.set('i', '<C-CR>', latex_quick_compile, { noremap = true})
 
 
 
--- filerunner that reads the file defined in runfile.lua
-
-vim.api.nvim_set_keymap("n", "<leader>r", "<cmd>lua runfile.run_current_file()<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap(
-	"n",
-	"<C-M-n>", -- Ctrl + Alt + n
-	"<cmd>lua require('user.runfile').run_current_file()<CR>",
-	{ noremap = true, silent = true }
-)
 
 -- Initialising the file script to be used
 -- Lukas' code that he recommends for me to have
