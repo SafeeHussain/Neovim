@@ -41,6 +41,12 @@ end
 vim.keymap.set('i', '<C-CR>', latex_quick_compile, { noremap = true})
 
 
+-- Enables smoothscrolling
+vim.opt.wrap = true
+vim.opt.smoothscroll = true
+vim.opt.mousescroll = "ver:1"
+vim.opt.mouse = "a"
+
 
 
 -- Initialising the file script to be used
