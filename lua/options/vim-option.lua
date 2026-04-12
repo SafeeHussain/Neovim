@@ -11,7 +11,6 @@ vim.opt.autoindent=true
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
 
-
 -- Command that changes the clipboard to be able to be copied from neovim code to
 -- ~chatgpt~ other text editors
 vim.opt.clipboard = "unnamedplus"
@@ -46,8 +45,6 @@ vim.opt.wrap = true
 vim.opt.smoothscroll = true
 vim.opt.mousescroll = "ver:1"
 vim.opt.mouse = "a"
-
-
 
 -- Initialising the file script to be used
 -- Lukas' code that he recommends for me to have

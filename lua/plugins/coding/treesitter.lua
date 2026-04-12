@@ -1,6 +1,3 @@
--- DO NOT USE LATEX, IT WAS A PAIN
--- JUST USE MdMath.nvim AND INSTALL ITS DEPENDENCIES INSTEAD
-
 return {
 	"nvim-treesitter/nvim-treesitter",
 	lazy = false,

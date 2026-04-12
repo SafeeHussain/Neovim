@@ -21,17 +21,36 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
+                    -- common
+                    "trivy",
+                    "ast-grep",
 
 					-- lua config
 					"lua_ls",
+                    "stylua",
+                    "local-lua-debugger-vscode",
 
 					-- c++ config
 					"clangd",
+                    "cpptools",
+                    "clang-format",
 
 					-- python config
-					"pyright", -- LSP for python
 					"ruff", -- Linter and formatter
 					"taplo", -- LSP for toml (pyproject.toml files)
+                    "isort",
+                    "basedpyright",
+                    "debugpy",
+
+                    -- matlab config
+                    "matlab-language-server",
+                    "miss_hit",
+
+                    -- bash 
+                    "beautysh",
+                    "shellcheck",
+                    "bash-debug-adapter",
+                    "bash-language-server",
 
                     -- spell checker
                     "ltex",
