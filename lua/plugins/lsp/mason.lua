@@ -23,7 +23,7 @@ return {
 				ensure_installed = {
 					-- lua config
 					"lua_ls",
-                    "stylua",
+					"stylua",
 
 					-- c++ config
 					"clangd",
@@ -31,21 +31,48 @@ return {
 					-- python config
 					"ruff", -- Linter and formatter
 					"taplo", -- LSP for toml (pyproject.toml files)
-                    "basedpyright",
+					"basedpyright",
 
-                    -- spell checker
-                    "ltex",
+					-- spell checker
+					"ltex",
 				},
 			})
 		end,
 	},
 
-    -- lsp-config
+	-- ensure_installed
+	{
+		"WhoIsSethDaniel/mason-tool-installer.nvim",
+		config = function()
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"beautysh",
+					"shellcheck",
+					"bash-language-server",
+					"bash-debug-adapter",
+					"basedpyright",
+					"local-lua-debugger-vscode",
+					"selene",
+					"lua-language-server",
+					"clang-format",
+					"cpptools",
+					"trivy",
+					"debugpy",
+					"clangd",
+					"ltex-ls",
+					"ruff",
+					"stylua",
+					"taplo",
+				},
+			})
+		end,
+	},
+
+	-- lsp-config
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 			-- lua
 			vim.lsp.config.lua_ls = {
 				capabilities = capabilities,
@@ -64,18 +91,18 @@ return {
 			}
 			vim.lsp.enable("pyright")
 
-            -- topl
-            vim.lsp.config.taplo = {
-                capabilities = capabilities,
-            }
-            vim.lsp.enable("taplo")
+			-- topl
+			vim.lsp.config.taplo = {
+				capabilities = capabilities,
+			}
+			vim.lsp.enable("taplo")
 
-            -- ltex (grammar/spell checker) - EXCLUDES markdown
-            vim.lsp.config.ltex = {
-                capabilities = capabilities,
-                filetypes = { "tex", "bib", "plaintex" },
-            }
-            vim.lsp.enable("ltex")
+			-- ltex (grammar/spell checker) - EXCLUDES markdown
+			vim.lsp.config.ltex = {
+				capabilities = capabilities,
+				filetypes = { "tex", "bib", "plaintex" },
+			}
+			vim.lsp.enable("ltex")
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -83,5 +110,4 @@ return {
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
-
 }
