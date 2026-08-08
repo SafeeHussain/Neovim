@@ -26,7 +26,12 @@ vim.opt.relativenumber = false
 vim.opt.conceallevel = 2
 vim.opt.concealcursor = "nc"
 
--- Compiler for latex files
+-- Visual word wrapping
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true
+vim.opt.showbreak = "↳ "
+vim.opt.textwidth = 0
 
 -- Function to save, compile, view, and return to insert mode
 local function latex_quick_compile()
